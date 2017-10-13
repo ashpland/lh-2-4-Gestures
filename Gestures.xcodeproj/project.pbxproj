@@ -17,6 +17,8 @@
 		49B79DC11F90110F00B98327 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49B79DBF1F90110F00B98327 /* LaunchScreen.storyboard */; };
 		49B79DC41F90110F00B98327 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 49B79DC31F90110F00B98327 /* main.m */; };
 		49E2A9FA1F904EA4007026F1 /* SwipeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49E2A9F91F904EA4007026F1 /* SwipeViewController.m */; };
+		49E2A9FD1F905EAA007026F1 /* RotateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49E2A9FC1F905EAA007026F1 /* RotateViewController.m */; };
+		49E2AA001F906164007026F1 /* EdgeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49E2A9FF1F906164007026F1 /* EdgeViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +39,10 @@
 		49B79DC31F90110F00B98327 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		49E2A9F81F904EA4007026F1 /* SwipeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwipeViewController.h; sourceTree = "<group>"; };
 		49E2A9F91F904EA4007026F1 /* SwipeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SwipeViewController.m; sourceTree = "<group>"; };
+		49E2A9FB1F905EAA007026F1 /* RotateViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RotateViewController.h; sourceTree = "<group>"; };
+		49E2A9FC1F905EAA007026F1 /* RotateViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RotateViewController.m; sourceTree = "<group>"; };
+		49E2A9FE1F906164007026F1 /* EdgeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EdgeViewController.h; sourceTree = "<group>"; };
+		49E2A9FF1F906164007026F1 /* EdgeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EdgeViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +77,10 @@
 			isa = PBXGroup;
 			children = (
 				49B79DBA1F90110F00B98327 /* Main.storyboard */,
+				49E2A9FB1F905EAA007026F1 /* RotateViewController.h */,
+				49E2A9FC1F905EAA007026F1 /* RotateViewController.m */,
+				49E2A9FE1F906164007026F1 /* EdgeViewController.h */,
+				49E2A9FF1F906164007026F1 /* EdgeViewController.m */,
 				49E2A9F81F904EA4007026F1 /* SwipeViewController.h */,
 				49E2A9F91F904EA4007026F1 /* SwipeViewController.m */,
 				496F7F971F90170900D49449 /* PanViewController.h */,
@@ -170,7 +180,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				496F7F991F90170900D49449 /* PanViewController.m in Sources */,
+				49E2A9FD1F905EAA007026F1 /* RotateViewController.m in Sources */,
 				49B79DC41F90110F00B98327 /* main.m in Sources */,
+				49E2AA001F906164007026F1 /* EdgeViewController.m in Sources */,
 				496F7FA21F902C6B00D49449 /* PinchViewController.m in Sources */,
 				49E2A9FA1F904EA4007026F1 /* SwipeViewController.m in Sources */,
 				496F7F9C1F90171E00D49449 /* TapViewController.m in Sources */,

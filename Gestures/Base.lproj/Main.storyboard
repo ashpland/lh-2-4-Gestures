@@ -17,12 +17,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
                         <segue destination="vLu-Zv-bpJ" kind="relationship" relationship="viewControllers" id="zIZ-QE-WiM"/>
                         <segue destination="6oy-kx-RQ4" kind="relationship" relationship="viewControllers" id="UWE-Ck-US9"/>
                         <segue destination="FuO-Yd-IQB" kind="relationship" relationship="viewControllers" id="NBB-n2-Ofd"/>
                         <segue destination="mi4-J9-h9G" kind="relationship" relationship="viewControllers" id="267-am-6bI"/>
+                        <segue destination="Fmk-fW-vXv" kind="relationship" relationship="viewControllers" id="wLQ-Ch-6MK"/>
+                        <segue destination="WAB-r9-dRc" kind="relationship" relationship="viewControllers" id="mT2-4U-5zM"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="baB-Ao-iZl" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -109,11 +112,45 @@
             </objects>
             <point key="canvasLocation" x="-1423" y="582"/>
         </scene>
+        <!--Rotate-->
+        <scene sceneID="tby-jj-QcZ">
+            <objects>
+                <viewController id="Fmk-fW-vXv" customClass="RotateViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="oue-0L-YSN">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.58072251080000004" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="Qcz-Re-CSC"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Rotate" image="item5" id="lYS-ua-9VK"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7Me-xR-Sga" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1474" y="-321"/>
+        </scene>
+        <!--Edge-->
+        <scene sceneID="hRZ-AO-Ijy">
+            <objects>
+                <viewController id="WAB-r9-dRc" customClass="EdgeViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="KC6-xf-81S">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.99953407049999998" green="0.98835557699999999" blue="0.47265523669999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="XhL-7F-vTH"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Edge" image="item6" id="mFm-N0-Li9"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jLA-g9-h4B" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-383" y="-887"/>
+        </scene>
     </scenes>
     <resources>
         <image name="item1" width="30" height="30"/>
         <image name="item2" width="30" height="28"/>
         <image name="item3" width="30" height="28"/>
         <image name="item4" width="30" height="30"/>
+        <image name="item5" width="30" height="30"/>
+        <image name="item6" width="30" height="30"/>
     </resources>
 </document>
