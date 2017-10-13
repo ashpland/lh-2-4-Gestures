@@ -10,6 +10,7 @@
 
 @interface EdgeViewController ()
 
+@property (nonatomic, strong) UIView *edgeBox;
 @property (nonatomic, strong) NSLayoutConstraint *edgeBoxLeftConstraint;
 @property (nonatomic, strong) UIScreenEdgePanGestureRecognizer *edgeRecognizer;
 @property (nonatomic, strong) UIPanGestureRecognizer *panRecognizer;
@@ -23,23 +24,23 @@
     [super viewDidLoad];
 
 
-    UIView *edgeBox = [[UIView alloc] initWithFrame:CGRectZero];
-    edgeBox.translatesAutoresizingMaskIntoConstraints = NO;
-    edgeBox.backgroundColor = [UIColor darkGrayColor];
-    [self.view addSubview:edgeBox];
+    self.edgeBox = [[UIView alloc] initWithFrame:CGRectZero];
+    self.edgeBox.translatesAutoresizingMaskIntoConstraints = NO;
+    self.edgeBox.backgroundColor = [UIColor darkGrayColor];
+    [self.view addSubview:self.edgeBox];
     
-    [[edgeBox.heightAnchor constraintEqualToAnchor:self.view.heightAnchor multiplier:0.75] setActive:YES];
-    [[edgeBox.centerYAnchor constraintEqualToAnchor:self.view.centerYAnchor] setActive:YES];
-    [[edgeBox.widthAnchor constraintEqualToAnchor:self.view.widthAnchor] setActive:YES];
-    self.edgeBoxLeftConstraint = [edgeBox.leadingAnchor constraintEqualToAnchor:self.view.trailingAnchor constant:-16.0];
+    [[self.edgeBox.heightAnchor constraintEqualToAnchor:self.view.heightAnchor multiplier:0.75] setActive:YES];
+    [[self.edgeBox.centerYAnchor constraintEqualToAnchor:self.view.centerYAnchor] setActive:YES];
+    [[self.edgeBox.widthAnchor constraintEqualToAnchor:self.view.widthAnchor] setActive:YES];
+    self.edgeBoxLeftConstraint = [self.edgeBox.leadingAnchor constraintEqualToAnchor:self.view.trailingAnchor constant:-16.0];
     [self.edgeBoxLeftConstraint setActive:YES];
 
     self.edgeRecognizer = [[UIScreenEdgePanGestureRecognizer alloc] initWithTarget:self action:@selector(viewEdged:)];
     self.edgeRecognizer.edges = UIRectEdgeRight;
-    [edgeBox addGestureRecognizer:self.edgeRecognizer];
+    [self.edgeBox addGestureRecognizer:self.edgeRecognizer];
     
     self.panRecognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(viewPanned:)];
-    //[edgeBox addGestureRecognizer:self.panRecognizer];
+    //[self.edgeBox addGestureRecognizer:self.panRecognizer];
 
     
 }
@@ -53,9 +54,8 @@
         [self.edgeBoxLeftConstraint setActive:NO];
         self.edgeBoxLeftConstraint = [sender.view.leadingAnchor constraintEqualToAnchor:self.view.leadingAnchor constant:self.view.frame.size.width/4.0];
         [self.edgeBoxLeftConstraint setActive:YES];
-        [sender.view removeGestureRecognizer:self.edgeRecognizer];
-        [sender.view addGestureRecognizer:self.panRecognizer];
-
+        [self.edgeBox removeGestureRecognizer:self.edgeRecognizer];
+        [self.edgeBox addGestureRecognizer:self.panRecognizer];
     } else {
         sender.view.center = newCenter;
         
@@ -69,12 +69,20 @@
     CGPoint oldCenter = sender.view.center;
     CGPoint newCenter = CGPointMake(oldCenter.x + translationInView.x, oldCenter.y);
     
-    sender.view.center = newCenter;
+    if ((newCenter.x - sender.view.frame.size.width / 2) < self.view.frame.size.width/4.0) {
+        return;
+    } else if ((newCenter.x - sender.view.frame.size.width / 2) > (self.view.frame.size.width / 2.0)) {
+        [self.edgeBoxLeftConstraint setActive:NO];
+        self.edgeBoxLeftConstraint = [self.edgeBox.leadingAnchor constraintEqualToAnchor:self.view.trailingAnchor constant:-16.0];
+        [self.edgeBoxLeftConstraint setActive:YES];
+        [self.edgeBox removeGestureRecognizer:self.panRecognizer];
+        [self.edgeBox addGestureRecognizer:self.edgeRecognizer];
+        
+    } else {
+        sender.view.center = newCenter;
+        [sender setTranslation:CGPointZero inView:self.view];
+    }
     
-    [sender setTranslation:CGPointZero inView:self.view];
-
-    
-    NSLog(@"Panned");
 }
 
 
