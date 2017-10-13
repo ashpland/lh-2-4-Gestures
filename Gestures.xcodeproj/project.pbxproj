@@ -8,15 +8,25 @@
 
 /* Begin PBXBuildFile section */
 		496F7F961F90155B00D49449 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 496F7F951F90155B00D49449 /* Default-568h@2x.png */; };
+		496F7F991F90170900D49449 /* PanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 496F7F981F90170900D49449 /* PanViewController.m */; };
+		496F7F9C1F90171E00D49449 /* TapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 496F7F9B1F90171E00D49449 /* TapViewController.m */; };
+		496F7FA21F902C6B00D49449 /* PinchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 496F7FA11F902C6B00D49449 /* PinchViewController.m */; };
 		49B79DB61F90110F00B98327 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 49B79DB51F90110F00B98327 /* AppDelegate.m */; };
 		49B79DBC1F90110F00B98327 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49B79DBA1F90110F00B98327 /* Main.storyboard */; };
 		49B79DBE1F90110F00B98327 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49B79DBD1F90110F00B98327 /* Assets.xcassets */; };
 		49B79DC11F90110F00B98327 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49B79DBF1F90110F00B98327 /* LaunchScreen.storyboard */; };
 		49B79DC41F90110F00B98327 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 49B79DC31F90110F00B98327 /* main.m */; };
+		49E2A9FA1F904EA4007026F1 /* SwipeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49E2A9F91F904EA4007026F1 /* SwipeViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		496F7F951F90155B00D49449 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		496F7F971F90170900D49449 /* PanViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PanViewController.h; sourceTree = "<group>"; };
+		496F7F981F90170900D49449 /* PanViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PanViewController.m; sourceTree = "<group>"; };
+		496F7F9A1F90171E00D49449 /* TapViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TapViewController.h; sourceTree = "<group>"; };
+		496F7F9B1F90171E00D49449 /* TapViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TapViewController.m; sourceTree = "<group>"; };
+		496F7FA01F902C6B00D49449 /* PinchViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PinchViewController.h; sourceTree = "<group>"; };
+		496F7FA11F902C6B00D49449 /* PinchViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PinchViewController.m; sourceTree = "<group>"; };
 		49B79DB11F90110F00B98327 /* Gestures.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gestures.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		49B79DB41F90110F00B98327 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		49B79DB51F90110F00B98327 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -25,6 +35,8 @@
 		49B79DC01F90110F00B98327 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		49B79DC21F90110F00B98327 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		49B79DC31F90110F00B98327 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		49E2A9F81F904EA4007026F1 /* SwipeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwipeViewController.h; sourceTree = "<group>"; };
+		49E2A9F91F904EA4007026F1 /* SwipeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SwipeViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +71,14 @@
 			isa = PBXGroup;
 			children = (
 				49B79DBA1F90110F00B98327 /* Main.storyboard */,
+				49E2A9F81F904EA4007026F1 /* SwipeViewController.h */,
+				49E2A9F91F904EA4007026F1 /* SwipeViewController.m */,
+				496F7F971F90170900D49449 /* PanViewController.h */,
+				496F7F981F90170900D49449 /* PanViewController.m */,
+				496F7FA01F902C6B00D49449 /* PinchViewController.h */,
+				496F7FA11F902C6B00D49449 /* PinchViewController.m */,
+				496F7F9A1F90171E00D49449 /* TapViewController.h */,
+				496F7F9B1F90171E00D49449 /* TapViewController.m */,
 				49B79DC21F90110F00B98327 /* Info.plist */,
 				49B79DCA1F90113A00B98327 /* Supporting Files */,
 			);
@@ -149,7 +169,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				496F7F991F90170900D49449 /* PanViewController.m in Sources */,
 				49B79DC41F90110F00B98327 /* main.m in Sources */,
+				496F7FA21F902C6B00D49449 /* PinchViewController.m in Sources */,
+				49E2A9FA1F904EA4007026F1 /* SwipeViewController.m in Sources */,
+				496F7F9C1F90171E00D49449 /* TapViewController.m in Sources */,
 				49B79DB61F90110F00B98327 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -285,7 +309,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = T5E8L2XP69;
 				INFOPLIST_FILE = Gestures/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = hearthedge.Gestures;
@@ -299,7 +323,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = T5E8L2XP69;
 				INFOPLIST_FILE = Gestures/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = hearthedge.Gestures;
